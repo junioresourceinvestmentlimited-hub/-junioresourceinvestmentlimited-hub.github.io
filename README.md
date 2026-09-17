@@ -1,1611 +1,1400 @@
-# JURIL.COM
-My website 
+JURIL
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Junio Resource Investment Limited — General Trading & Investment</title>
+<title>JUNIO RESOURCE INVESTMENT LIMITED</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="JUNIO RESOURCE INVESTMENT LIMITED - Entrepreneurship, General Trading and Investment. Main Office Abuja, Branch Office Jos, Plateau State.">
 
 <style>
+/* =========================
+   JUNIO RESOURCE INVESTMENT LIMITED
+   SINGLE FILE WEBSITE
+   ========================= */
 
-:root{
-  --ink:#F3EFE1;
-  --ink-soft:#DCE3EC;
-
-  /* NAVY BLUE BACKGROUND */
-  --paper:#0B1F3A;
-  --paper-soft:#102A4C;
-
-  --brass:#B8863A;
-  --brass-dim:#8A6527;
-
-  --ash:#B8C2D1;
-  --bone:#F3EFE1;
-
-  --line:rgba(184,134,58,0.35);
-  --line-dark:rgba(243,239,225,0.18);
-
-  --max:1180px;
+:root {
+    --navy: #071d38;
+    --navy2: #102f52;
+    --navy3: #163b63;
+    --gold: #c69235;
+    --gold-light: #d9ad5c;
+    --cream: #f5f0df;
+    --white: #ffffff;
+    --muted: #c5cfdb;
+    --line: rgba(198,146,53,0.35);
 }
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-  scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-  font-family:"DM Sans",sans-serif;
-  background:var(--paper);
-  color:var(--ink);
-  line-height:1.6;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--navy);
+    color: var(--cream);
+    line-height: 1.6;
 }
 
-a{
-  color:inherit;
-  text-decoration:none;
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
-img{
-  max-width:100%;
-  display:block;
+.container {
+    width: 92%;
+    max-width: 1180px;
+    margin: auto;
 }
 
-.container{
-  width:min(92%,var(--max));
-  margin:auto;
+/* =========================
+   HEADER
+   ========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(7,29,56,0.97);
+    border-bottom: 1px solid var(--line);
+    backdrop-filter: blur(10px);
 }
 
-/* HEADER */
-
-header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:rgba(11,31,58,.96);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid var(--line);
+.header-inner {
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
 }
 
-.nav{
-  min-height:76px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:30px;
+.logo {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--cream);
 }
 
-.brand{
-  font-family:"Playfair Display",serif;
-  font-size:1.35rem;
-  font-weight:700;
-  color:var(--bone);
+.logo span {
+    color: var(--gold);
 }
 
-.brand span{
-  color:var(--brass);
+nav {
+    display: flex;
+    gap: 24px;
 }
 
-nav{
-  display:flex;
-  gap:25px;
-  flex-wrap:wrap;
+nav a {
+    font-size: 14px;
+    color: var(--muted);
+    transition: 0.3s;
 }
 
-nav a{
-  font-size:.9rem;
-  color:var(--ink-soft);
-  transition:.3s;
+nav a:hover {
+    color: var(--gold-light);
 }
 
-nav a:hover{
-  color:var(--brass);
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--line);
+    background:
+        linear-gradient(
+            rgba(7,29,56,0.92),
+            rgba(7,29,56,0.98)
+        );
 }
 
-/* HERO */
-
-.hero{
-  min-height:88vh;
-  display:flex;
-  align-items:center;
-  background:
-    linear-gradient(rgba(11,31,58,.88),rgba(11,31,58,.96)),
-    var(--paper);
-  border-bottom:1px solid var(--line);
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    align-items: center;
+    padding: 80px 0;
 }
 
-.hero-grid{
-  display:grid;
-  grid-template-columns:1.2fr .8fr;
-  gap:60px;
-  align-items:center;
+.eyebrow {
+    color: var(--gold-light);
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
 }
 
-.kicker{
-  color:var(--brass);
-  font-size:.8rem;
-  font-weight:700;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  margin-bottom:18px;
+.hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(48px, 7vw, 90px);
+    line-height: 0.98;
+    margin-bottom: 30px;
 }
 
-.hero h1{
-  font-family:"Playfair Display",serif;
-  font-size:clamp(3rem,7vw,6rem);
-  line-height:1;
-  margin-bottom:25px;
+.hero h1 span {
+    color: var(--gold);
 }
 
-.hero h1 span{
-  color:var(--brass);
+.hero-description {
+    max-width: 650px;
+    color: var(--muted);
+    font-size: 18px;
+    margin-bottom: 35px;
 }
 
-.hero p{
-  color:var(--ink-soft);
-  max-width:650px;
-  font-size:1.05rem;
-  margin-bottom:30px;
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
-.btns{
-  display:flex;
-  gap:15px;
-  flex-wrap:wrap;
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    border: 1px solid var(--gold);
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.btn{
-  display:inline-block;
-  padding:13px 22px;
-  border:1px solid var(--brass);
-  font-weight:700;
-  font-size:.9rem;
-  transition:.3s;
+.btn-primary {
+    background: var(--gold);
+    color: #071d38;
 }
 
-.btn-primary{
-  background:var(--brass);
-  color:#101820;
+.btn-primary:hover {
+    background: var(--gold-light);
 }
 
-.btn-primary:hover{
-  background:#d19b43;
-}
-
-.btn-outline{
-  color:var(--bone);
-}
-
-.btn-outline:hover{
-  background:var(--brass);
-  color:#101820;
+.btn-outline:hover {
+    background: var(--gold);
+    color: #071d38;
 }
 
 /* HERO CARD */
 
-.hero-card{
-  border:1px solid var(--line);
-  padding:35px;
-  background:rgba(16,42,76,.75);
+.hero-card {
+    background: var(--navy2);
+    border: 1px solid var(--line);
+    padding: 35px;
 }
 
-.hero-card h3{
-  font-family:"Playfair Display",serif;
-  font-size:1.7rem;
-  margin-bottom:15px;
+.hero-card h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    margin-bottom: 15px;
 }
 
-.hero-card p{
-  font-size:.95rem;
-  margin-bottom:20px;
+.hero-card p {
+    color: var(--muted);
+    margin-bottom: 20px;
 }
 
-.hero-card ul{
-  list-style:none;
+.hero-card ul {
+    list-style: none;
 }
 
-.hero-card li{
-  padding:10px 0;
-  border-bottom:1px solid var(--line-dark);
-  color:var(--ink-soft);
+.hero-card li {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    color: var(--cream);
 }
 
-.hero-card li::before{
-  content:"◆";
-  color:var(--brass);
-  margin-right:10px;
-  font-size:.65rem;
+.hero-card li::before {
+    content: "◆";
+    color: var(--gold);
+    margin-right: 10px;
+    font-size: 9px;
 }
 
-/* SECTIONS */
+/* =========================
+   GENERAL SECTIONS
+   ========================= */
 
-section{
-  padding:100px 0;
-  border-bottom:1px solid var(--line);
+section {
+    padding: 95px 0;
+    border-bottom: 1px solid var(--line);
 }
 
-.section-head{
-  margin-bottom:50px;
+.section-title {
+    margin-bottom: 45px;
 }
 
-.section-head h2{
-  font-family:"Playfair Display",serif;
-  font-size:clamp(2rem,4vw,3.4rem);
-  margin-bottom:15px;
+.section-label {
+    color: var(--gold-light);
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
 }
 
-.section-head p{
-  max-width:700px;
-  color:var(--ink-soft);
+.section-title h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(34px, 5vw, 58px);
+    margin-bottom: 15px;
 }
 
-/* CARDS */
-
-.cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:25px;
+.section-title p {
+    max-width: 700px;
+    color: var(--muted);
 }
 
-.card{
-  padding:30px;
-  background:var(--paper-soft);
-  border:1px solid var(--line);
-  transition:.3s;
+/* =========================
+   ABOUT
+   ========================= */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
 }
 
-.card:hover{
-  transform:translateY(-5px);
-  border-color:var(--brass);
+.about-box {
+    border-left: 3px solid var(--gold);
+    padding-left: 25px;
 }
 
-.card-number{
-  color:var(--brass);
-  font-size:.8rem;
-  font-weight:700;
-  letter-spacing:2px;
-  margin-bottom:15px;
+.about-box p {
+    color: var(--muted);
+    margin-bottom: 20px;
 }
 
-.card h3{
-  font-family:"Playfair Display",serif;
-  font-size:1.5rem;
-  margin-bottom:12px;
+.info-list {
+    list-style: none;
 }
 
-.card p{
-  color:var(--ink-soft);
-  font-size:.95rem;
+.info-list li {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
 }
 
-/* ABOUT */
+/* =========================
+   SERVICES
+   ========================= */
 
-.about-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:60px;
-  align-items:start;
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
-.about-box{
-  border-left:3px solid var(--brass);
-  padding-left:25px;
+.card {
+    background: var(--navy2);
+    border: 1px solid var(--line);
+    padding: 30px;
+    transition: 0.3s;
 }
 
-.about-box p{
-  color:var(--ink-soft);
-  margin-bottom:20px;
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
 }
 
-.about-list{
-  list-style:none;
+.card-number {
+    color: var(--gold);
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
 }
 
-.about-list li{
-  padding:12px 0;
-  border-bottom:1px solid var(--line-dark);
+.card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    margin-bottom: 12px;
 }
 
-/* STATS */
-
-.stats{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:20px;
-  margin-top:50px;
+.card p {
+    color: var(--muted);
 }
 
-.stat{
-  padding:25px;
-  border:1px solid var(--line);
-  background:var(--paper-soft);
+/* =========================
+   BUSINESS AREAS
+   ========================= */
+
+.business-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
 }
 
-.stat strong{
-  display:block;
-  font-family:"Playfair Display",serif;
-  color:var(--brass);
-  font-size:2.3rem;
+.business-box {
+    background: var(--navy2);
+    border: 1px solid var(--line);
+    padding: 30px;
 }
 
-.stat span{
-  color:var(--ink-soft);
-  font-size:.9rem;
+.business-box h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 27px;
+    margin-bottom: 10px;
 }
 
-/* TIMELINE */
-
-.timeline{
-  display:grid;
-  gap:20px;
+.business-box p {
+    color: var(--muted);
 }
 
-.timeline-item{
-  display:grid;
-  grid-template-columns:150px 1fr;
-  gap:30px;
-  padding:25px 0;
-  border-bottom:1px solid var(--line-dark);
+/* =========================
+   OFFICES
+   ========================= */
+
+.office-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
 }
 
-.timeline-year{
-  color:var(--brass);
-  font-weight:700;
+.office {
+    background: var(--navy2);
+    border: 1px solid var(--line);
+    padding: 35px;
 }
 
-.timeline-item h3{
-  font-family:"Playfair Display",serif;
-  margin-bottom:8px;
+.office-label {
+    color: var(--gold-light);
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 13px;
+    margin-bottom: 10px;
 }
 
-.timeline-item p{
-  color:var(--ink-soft);
+.office h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 32px;
 }
 
-/* VALUES */
-
-.values{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:20px;
+.office p {
+    color: var(--muted);
+    margin-top: 10px;
 }
 
-.value{
-  padding:25px;
-  border-top:2px solid var(--brass);
-  background:var(--paper-soft);
+/* =========================
+   CONTACT
+   ========================= */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 55px;
 }
 
-.value h3{
-  font-family:"Playfair Display",serif;
-  margin-bottom:10px;
+.contact-details {
+    margin-top: 25px;
 }
 
-.value p{
-  color:var(--ink-soft);
-  font-size:.9rem;
+.contact-item {
+    padding: 17px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
 }
 
-/* SERVICES */
-
-.services{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:25px;
+.contact-item strong {
+    display: block;
+    color: var(--gold-light);
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
 }
 
-.service{
-  padding:30px;
-  border:1px solid var(--line);
-  background:var(--paper-soft);
+.contact-item a {
+    color: var(--cream);
+    word-break: break-word;
 }
 
-.service h3{
-  font-family:"Playfair Display",serif;
-  font-size:1.6rem;
-  margin-bottom:10px;
-}
-
-.service p{
-  color:var(--ink-soft);
-}
-
-/* PORTFOLIO */
-
-.portfolio{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:25px;
-}
-
-.portfolio-item{
-  min-height:250px;
-  padding:30px;
-  background:linear-gradient(
-    135deg,
-    #102A4C,
-    #0B1F3A
-  );
-  border:1px solid var(--line);
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-end;
-}
-
-.portfolio-item span{
-  color:var(--brass);
-  font-size:.75rem;
-  text-transform:uppercase;
-  letter-spacing:2px;
-  margin-bottom:8px;
-}
-
-.portfolio-item h3{
-  font-family:"Playfair Display",serif;
-  font-size:1.6rem;
-}
-
-/* LOCATION */
-
-.location-box{
-  padding:40px;
-  border:1px solid var(--line);
-  background:var(--paper-soft);
-}
-
-.location-box h3{
-  font-family:"Playfair Display",serif;
-  font-size:2rem;
-  margin-bottom:15px;
-}
-
-.location-box p{
-  color:var(--ink-soft);
-}
-
-/* CONTACT */
-
-.contact-grid{
-  display:grid;
-  grid-template-columns:.8fr 1.2fr;
-  gap:50px;
-}
-
-.contact-info h3{
-  font-family:"Playfair Display",serif;
-  font-size:2rem;
-  margin-bottom:20px;
-}
-
-.contact-info p{
-  color:var(--ink-soft);
-  margin-bottom:15px;
-}
-
-.contact-details{
-  margin-top:30px;
-}
-
-.contact-details div{
-  padding:12px 0;
-  border-bottom:1px solid var(--line-dark);
-}
-
-.contact-details strong{
-  display:block;
-  color:var(--brass);
-  font-size:.8rem;
-  text-transform:uppercase;
-  letter-spacing:1px;
+.contact-item a:hover {
+    color: var(--gold-light);
 }
 
 /* FORM */
 
-form{
-  background:var(--paper-soft);
-  border:1px solid var(--line);
-  padding:35px;
+.contact-form {
+    background: var(--navy2);
+    border: 1px solid var(--line);
+    padding: 35px;
 }
 
-.form-row{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
+.form-group {
+    margin-bottom: 20px;
 }
 
-.field{
-  margin-bottom:20px;
+.form-group label {
+    display: block;
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 8px;
 }
 
-.field label{
-  display:block;
-  margin-bottom:8px;
-  font-size:.85rem;
-  color:var(--ink-soft);
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid rgba(255,255,255,0.18);
+    background: var(--navy);
+    color: var(--cream);
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    outline: none;
 }
 
-.field input,
-.field textarea,
-.field select{
-  width:100%;
-  padding:13px;
-  border:1px solid var(--line-dark);
-  background:#0B1F3A;
-  color:var(--bone);
-  font-family:inherit;
-  outline:none;
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--gold);
 }
 
-.field input:focus,
-.field textarea:focus,
-.field select:focus{
-  border-color:var(--brass);
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
 }
 
-.field textarea{
-  min-height:140px;
-  resize:vertical;
+/* =========================
+   SOCIAL MEDIA
+   ========================= */
+
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
 }
 
-/* FOOTER */
-
-footer{
-  padding:45px 0;
-  background:#07172B;
-  border-top:1px solid var(--line);
+.social a {
+    border: 1px solid var(--line);
+    padding: 10px 15px;
+    color: var(--muted);
+    font-size: 14px;
+    transition: 0.3s;
 }
 
-.footer-grid{
-  display:flex;
-  justify-content:space-between;
-  gap:30px;
-  flex-wrap:wrap;
+.social a:hover {
+    background: var(--gold);
+    color: var(--navy);
 }
 
-.footer-brand{
-  font-family:"Playfair Display",serif;
-  font-size:1.4rem;
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    background: #041326;
+    padding: 50px 0 25px;
 }
 
-.footer-brand span{
-  color:var(--brass);
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 40px;
 }
 
-.footer-text{
-  color:var(--ash);
-  font-size:.85rem;
+.footer-column h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    margin-bottom: 15px;
 }
 
-/* MOBILE */
+.footer-column p,
+.footer-column li {
+    color: var(--muted);
+    font-size: 14px;
+}
 
-@media(max-width:900px){
+.footer-column ul {
+    list-style: none;
+}
 
-  .hero-grid,
-  .about-grid,
-  .contact-grid{
-    grid-template-columns:1fr;
-  }
+.footer-column li {
+    margin-bottom: 8px;
+}
 
-  .cards,
-  .portfolio{
-    grid-template-columns:1fr 1fr;
-  }
+.footer-column a:hover {
+    color: var(--gold-light);
+}
 
-  .values,
-  .stats{
-    grid-template-columns:1fr 1fr;
-  }
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: #9eabb9;
+    font-size: 13px;
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 850px) {
+
+    .header-inner {
+        flex-direction: column;
+        justify-content: center;
+        padding: 18px 0;
+    }
+
+    nav {
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero-grid,
+    .about-grid,
+    .contact-grid,
+    .office-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .business-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+    .hero {
+        min-height: auto;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
 
 }
 
-@media(max-width:650px){
+@media (max-width: 480px) {
 
-  nav{
-    display:none;
-  }
+    .container {
+        width: 88%;
+    }
 
-  .hero{
-    min-height:auto;
-    padding:100px 0;
-  }
+    nav a {
+        font-size: 12px;
+    }
 
-  section{
-    padding:70px 0;
-  }
+    .hero h1 {
+        font-size: 45px;
+    }
 
-  .cards,
-  .portfolio,
-  .services,
-  .values,
-  .stats{
-    grid-template-columns:1fr;
-  }
+    section {
+        padding: 70px 0;
+    }
 
-  .form-row{
-    grid-template-columns:1fr;
-  }
-
-  .timeline-item{
-    grid-template-columns:1fr;
-    gap:5px;
-  }
+    .contact-form {
+        padding: 22px;
+    }
 
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- =========================
+     HEADER
+     ========================= -->
 
 <header>
-  <div class="container nav">
 
-    <a href="#home" class="brand">
-      Junio <span>Resource</span>
+<div class="container header-inner">
+
+    <a href="#home" class="logo">
+        JUNIO <span>RESOURCE</span>
     </a>
 
     <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#offices">Offices</a>
+        <a href="#contact">Contact</a>
     </nav>
 
-  </div>
+</div>
+
 </header>
 
 
-<!-- HOME -->
+<!-- =========================
+     HOME
+     ========================= -->
 
 <section class="hero" id="home">
 
-  <div class="container hero-grid">
+<div class="container hero-grid">
 
     <div>
 
-      <div class="kicker">
-        General Trading & Investment
-      </div>
+        <div class="eyebrow">
+            ENTREPRENEURSHIP • TRADING • INVESTMENT
+        </div>
 
-      <h1>
-        Building Value.<br>
-        <span>Creating Opportunity.</span>
-      </h1>
+        <h1>
+            Building Value.<br>
+            <span>Creating Opportunity.</span>
+        </h1>
 
-      <p>
-        Junio Resource Investment Limited is a Nigerian company
-        focused on general trading, investment and strategic business
-        opportunities across local and international markets.
-      </p>
+        <p class="hero-description">
+            JUNIO RESOURCE INVESTMENT LIMITED is an entrepreneurship,
+            trading and investment company focused on creating
+            business opportunities, building partnerships and
+            delivering value.
+        </p>
 
-      <div class="btns">
+        <div class="buttons">
 
-        <a href="#services" class="btn btn-primary">
-          Explore Services
-        </a>
+            <a href="#services" class="btn btn-primary">
+                Our Services
+            </a>
 
-        <a href="#contact" class="btn btn-outline">
-          Contact Us
-        </a>
+            <a href="#contact" class="btn">
+                Contact Us
+            </a>
 
-      </div>
+        </div>
 
     </div>
 
 
     <div class="hero-card">
 
-      <h3>
-        Our Focus
-      </h3>
+        <h2>Our Focus</h2>
 
-      <p>
-        We connect opportunities with practical business solutions.
-      </p>
+        <p>
+            Connecting opportunities with practical business solutions.
+        </p>
 
-      <ul>
+        <ul>
 
-        <li>
-          General Trading
-        </li>
+            <li>Entrepreneurship</li>
 
-        <li>
-          Commodity Trading
-        </li>
+            <li>General Trading</li>
 
-        <li>
-          Investment Opportunities
-        </li>
+            <li>Commodity Trading</li>
 
-        <li>
-          Business Development
-        </li>
+            <li>Import & Export</li>
 
-        <li>
-          Export & Import
-        </li>
+            <li>Investment Opportunities</li>
 
-      </ul>
+        </ul>
 
     </div>
 
-  </div>
+</div>
 
 </section>
 
 
-<!-- WHAT WE DO -->
-
-<section id="services">
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <div class="kicker">
-        What We Do
-      </div>
-
-      <h2>
-        Practical business solutions.
-      </h2>
-
-      <p>
-        Our activities are designed around identifying opportunities,
-        building partnerships and delivering value through trade and investment.
-      </p>
-
-    </div>
-
-
-    <div class="cards">
-
-      <div class="card">
-
-        <div class="card-number">
-          01
-        </div>
-
-        <h3>
-          General Trading
-        </h3>
-
-        <p>
-          Trading of selected goods, commodities and products
-          across Nigerian and international markets.
-        </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="card-number">
-          02
-        </div>
-
-        <h3>
-          Commodity Trading
-        </h3>
-
-        <p>
-          Sourcing and supply of agricultural and natural-resource
-          commodities for qualified buyers and partners.
-        </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="card-number">
-          03
-        </div>
-
-        <h3>
-          Investment
-        </h3>
-
-        <p>
-          Exploring commercially viable opportunities that support
-          sustainable business growth and value creation.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- WHY JUNIO -->
-
-<section>
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <div class="kicker">
-        Why Work With Junio
-      </div>
-
-      <h2>
-        Built around opportunity and trust.
-      </h2>
-
-    </div>
-
-
-    <div class="cards">
-
-      <div class="card">
-
-        <div class="card-number">
-          01
-        </div>
-
-        <h3>
-          Market Focus
-        </h3>
-
-        <p>
-          We focus on practical opportunities with clear commercial potential.
-        </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="card-number">
-          02
-        </div>
-
-        <h3>
-          Partnerships
-        </h3>
-
-        <p>
-          We work with suppliers, buyers and strategic partners
-          to develop mutually beneficial relationships.
-        </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="card-number">
-          03
-        </div>
-
-        <h3>
-          Reliability
-        </h3>
-
-        <p>
-          Professional communication, responsible sourcing and
-          transparent business practices are central to our approach.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ABOUT -->
+<!-- =========================
+     ABOUT
+     ========================= -->
 
 <section id="about">
 
-  <div class="container">
+<div class="container">
 
-    <div class="section-head">
+    <div class="section-title">
 
-      <div class="kicker">
-        About Junio
-      </div>
+        <div class="section-label">
+            ABOUT JUNIO
+        </div>
 
-      <h2>
-        A Nigerian business built for growth.
-      </h2>
+        <h2>
+            A Nigerian company built for opportunity.
+        </h2>
+
+        <p>
+            JUNIO RESOURCE INVESTMENT LIMITED operates with a focus
+            on entrepreneurship, trading, investment and strategic
+            business opportunities.
+        </p>
 
     </div>
 
 
     <div class="about-grid">
 
-      <div class="about-box">
+        <div class="about-box">
 
-        <p>
-          Junio Resource Investment Limited is a Nigerian business
-          established to participate in general trading, commodity
-          supply and investment opportunities.
-        </p>
+            <p>
+                Our objective is to develop reliable business
+                relationships with customers, suppliers, investors
+                and strategic partners.
+            </p>
 
-        <p>
-          Our goal is to build reliable relationships with customers,
-          suppliers and business partners while creating sustainable
-          commercial value.
-        </p>
+            <p>
+                We seek commercially viable opportunities while
+                maintaining professionalism, transparency and
+                responsible business practices.
+            </p>
 
-      </div>
-
-
-      <div>
-
-        <ul class="about-list">
-
-          <li>
-            Strategic sourcing
-          </li>
-
-          <li>
-            Responsible business practices
-          </li>
-
-          <li>
-            Customer-focused service
-          </li>
-
-          <li>
-            Local and international opportunities
-          </li>
-
-          <li>
-            Long-term partnerships
-          </li>
-
-        </ul>
-
-      </div>
-
-    </div>
-
-
-    <div class="stats">
-
-      <div class="stat">
-
-        <strong>
-          [X]
-        </strong>
-
-        <span>
-          Business Partners
-        </span>
-
-      </div>
-
-
-      <div class="stat">
-
-        <strong>
-          [X]
-        </strong>
-
-        <span>
-          Products / Commodities
-        </span>
-
-      </div>
-
-
-      <div class="stat">
-
-        <strong>
-          [X]
-        </strong>
-
-        <span>
-          Markets
-        </span>
-
-      </div>
-
-
-      <div class="stat">
-
-        <strong>
-          [Year]
-        </strong>
-
-        <span>
-          Established
-        </span>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- HOW WE GOT HERE -->
-
-<section>
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <div class="kicker">
-        How We Got Here
-      </div>
-
-      <h2>
-        Our journey.
-      </h2>
-
-    </div>
-
-
-    <div class="timeline">
-
-      <div class="timeline-item">
-
-        <div class="timeline-year">
-          [Year]
         </div>
+
 
         <div>
 
-          <h3>
-            Company Established
-          </h3>
+            <ul class="info-list">
 
-          <p>
-            Junio Resource Investment Limited was established
-            to pursue opportunities in trading and investment.
-          </p>
+                <li>Entrepreneurship & Business Development</li>
 
-        </div>
+                <li>General Trading</li>
 
-      </div>
+                <li>Commodity Sourcing</li>
 
+                <li>Import & Export</li>
 
-      <div class="timeline-item">
+                <li>Investment Opportunities</li>
 
-        <div class="timeline-year">
-          [Year]
-        </div>
-
-        <div>
-
-          <h3>
-            Market Development
-          </h3>
-
-          <p>
-            Expanded relationships with suppliers, customers
-            and potential business partners.
-          </p>
+            </ul>
 
         </div>
-
-      </div>
-
-
-      <div class="timeline-item">
-
-        <div class="timeline-year">
-          [Year]
-        </div>
-
-        <div>
-
-          <h3>
-            Growth
-          </h3>
-
-          <p>
-            Continued development of trading and investment
-            opportunities across selected markets.
-          </p>
-
-        </div>
-
-      </div>
 
     </div>
 
-  </div>
+</div>
 
 </section>
 
 
-<!-- VALUES -->
+<!-- =========================
+     SERVICES
+     ========================= -->
+
+<section id="services">
+
+<div class="container">
+
+    <div class="section-title">
+
+        <div class="section-label">
+            WHAT WE DO
+        </div>
+
+        <h2>
+            Our Business Services
+        </h2>
+
+        <p>
+            We focus on business activities that connect markets,
+            products, people and investment opportunities.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="card-number">01</div>
+
+            <h3>
+                Entrepreneurship
+            </h3>
+
+            <p>
+                Developing business ideas and opportunities with
+                a focus on sustainable commercial growth.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-number">02</div>
+
+            <h3>
+                General Trading
+            </h3>
+
+            <p>
+                Trading and sourcing of selected products and
+                commodities for customers and business partners.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-number">03</div>
+
+            <h3>
+                Commodity Trading
+            </h3>
+
+            <p>
+                Connecting suppliers and buyers for agricultural
+                and other commercially viable commodities.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-number">04</div>
+
+            <h3>
+                Import & Export
+            </h3>
+
+            <p>
+                Exploring domestic and international trade
+                opportunities through responsible sourcing.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-number">05</div>
+
+            <h3>
+                Investment
+            </h3>
+
+            <p>
+                Identifying business and investment opportunities
+                with potential for long-term value creation.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-number">06</div>
+
+            <h3>
+                Business Partnerships
+            </h3>
+
+            <p>
+                Building relationships with suppliers, buyers,
+                investors and strategic partners.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     BUSINESS AREAS
+     ========================= -->
 
 <section>
 
-  <div class="container">
+<div class="container">
 
-    <div class="section-head">
+    <div class="section-title">
 
-      <div class="kicker">
-        What We Value
-      </div>
+        <div class="section-label">
+            BUSINESS AREAS
+        </div>
 
-      <h2>
-        Principles that guide our business.
-      </h2>
-
-    </div>
-
-
-    <div class="values">
-
-      <div class="value">
-
-        <h3>
-          Integrity
-        </h3>
-
-        <p>
-          We aim to conduct business with honesty and transparency.
-        </p>
-
-      </div>
-
-
-      <div class="value">
-
-        <h3>
-          Quality
-        </h3>
-
-        <p>
-          We focus on reliable products, services and business relationships.
-        </p>
-
-      </div>
-
-
-      <div class="value">
-
-        <h3>
-          Partnership
-        </h3>
-
-        <p>
-          We believe sustainable growth comes through strong partnerships.
-        </p>
-
-      </div>
-
-
-      <div class="value">
-
-        <h3>
-          Growth
-        </h3>
-
-        <p>
-          We continuously seek opportunities to improve and expand.
-        </p>
-
-      </div>
+        <h2>
+            Connecting opportunity with action.
+        </h2>
 
     </div>
 
-  </div>
+
+    <div class="business-grid">
+
+        <div class="business-box">
+
+            <h3>
+                Agricultural Commodities
+            </h3>
+
+            <p>
+                Sourcing and trading selected agricultural products
+                for suitable domestic and international markets.
+            </p>
+
+        </div>
+
+
+        <div class="business-box">
+
+            <h3>
+                Natural Resources
+            </h3>
+
+            <p>
+                Exploring responsible trading opportunities within
+                natural-resource and commodity markets.
+            </p>
+
+        </div>
+
+
+        <div class="business-box">
+
+            <h3>
+                General Merchandise
+            </h3>
+
+            <p>
+                Trading selected goods based on market demand and
+                available commercial opportunities.
+            </p>
+
+        </div>
+
+
+        <div class="business-box">
+
+            <h3>
+                Strategic Investment
+            </h3>
+
+            <p>
+                Seeking practical opportunities for business growth,
+                partnerships and investment.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
 
 </section>
 
 
-<!-- SERVICES -->
+<!-- =========================
+     OFFICES
+     ========================= -->
 
-<section>
+<section id="offices">
 
-  <div class="container">
+<div class="container">
 
-    <div class="section-head">
+    <div class="section-title">
 
-      <div class="kicker">
-        Our Services
-      </div>
+        <div class="section-label">
+            OUR LOCATIONS
+        </div>
 
-      <h2>
-        Areas of business.
-      </h2>
-
-    </div>
-
-
-    <div class="services">
-
-      <div class="service">
-
-        <h3>
-          Commodity Sourcing
-        </h3>
-
-        <p>
-          Sourcing and supply of selected commodities for domestic
-          and international customers.
-        </p>
-
-      </div>
-
-
-      <div class="service">
-
-        <h3>
-          Export & Import
-        </h3>
-
-        <p>
-          Supporting cross-border trade opportunities while working
-          with appropriate suppliers and buyers.
-        </p>
-
-      </div>
-
-
-      <div class="service">
-
-        <h3>
-          General Merchandise
-        </h3>
-
-        <p>
-          Trading in selected products based on market demand
-          and commercial opportunities.
-        </p>
-
-      </div>
-
-
-      <div class="service">
-
-        <h3>
-          Investment Opportunities
-        </h3>
-
-        <p>
-          Identifying and evaluating opportunities for sustainable
-          business growth and investment.
-        </p>
-
-      </div>
+        <h2>
+            Serving opportunities from Nigeria.
+        </h2>
 
     </div>
 
-  </div>
+
+    <div class="office-grid">
+
+        <div class="office">
+
+            <div class="office-label">
+                MAIN OFFICE
+            </div>
+
+            <h3>
+                Abuja
+            </h3>
+
+            <p>
+                Federal Capital Territory, Nigeria
+            </p>
+
+        </div>
+
+
+        <div class="office">
+
+            <div class="office-label">
+                BRANCH OFFICE
+            </div>
+
+            <h3>
+                Jos, Plateau State
+            </h3>
+
+            <p>
+                Plateau State, Nigeria
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
 
 </section>
 
 
-<!-- PORTFOLIO -->
-
-<section id="portfolio">
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <div class="kicker">
-        Portfolio
-      </div>
-
-      <h2>
-        Selected business areas.
-      </h2>
-
-    </div>
-
-
-    <div class="portfolio">
-
-      <div class="portfolio-item">
-
-        <span>
-          Trading
-        </span>
-
-        <h3>
-          General Merchandise
-        </h3>
-
-      </div>
-
-
-      <div class="portfolio-item">
-
-        <span>
-          Commodities
-        </span>
-
-        <h3>
-          Agricultural Products
-        </h3>
-
-      </div>
-
-
-      <div class="portfolio-item">
-
-        <span>
-          Export
-        </span>
-
-        <h3>
-          International Trade
-        </h3>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- WHERE WE OPERATE -->
-
-<section>
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <div class="kicker">
-        Where We Operate
-      </div>
-
-      <h2>
-        Nigeria and beyond.
-      </h2>
-
-    </div>
-
-
-    <div class="location-box">
-
-      <h3>
-        Abuja, Nigeria
-      </h3>
-
-      <p>
-        Our business activities are focused on opportunities
-        within Nigeria while building relationships that can
-        support international trade.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- CONTACT -->
+<!-- =========================
+     CONTACT
+     ========================= -->
 
 <section id="contact">
 
-  <div class="container">
+<div class="container">
 
-    <div class="section-head">
+    <div class="section-title">
 
-      <div class="kicker">
-        Contact
-      </div>
+        <div class="section-label">
+            GET IN TOUCH
+        </div>
 
-      <h2>
-        Let's do business.
-      </h2>
+        <h2>
+            Let's talk about business.
+        </h2>
 
-      <p>
-        Contact Junio Resource Investment Limited to discuss
-        trading, sourcing, investment or partnership opportunities.
-      </p>
+        <p>
+            Contact JUNIO RESOURCE INVESTMENT LIMITED for
+            enquiries, partnerships, trading opportunities
+            and business engagements.
+        </p>
 
     </div>
 
 
     <div class="contact-grid">
 
-      <div class="contact-info">
 
-        <h3>
-          Get in touch
-        </h3>
+        <!-- CONTACT INFORMATION -->
 
-        <p>
-          We welcome enquiries from buyers, suppliers,
-          investors and strategic partners.
-        </p>
+        <div>
+
+            <div class="contact-details">
 
 
-        <div class="contact-details">
+                <div class="contact-item">
 
-          <div>
+                    <strong>PHONE</strong>
 
-            <strong>
-              Phone
-            </strong>
+                    <a href="tel:+2349130177744">
+                        +234 913 017 7744
+                    </a>
 
-            [Phone Number]
-
-          </div>
+                </div>
 
 
-          <div>
+                <div class="contact-item">
 
-            <strong>
-              Email
-            </strong>
+                    <strong>EMAIL</strong>
 
-            [Email Address]
+                    <a href="mailto:junioresourceinvestmentlimited@gmail.com">
+                        junioresourceinvestmentlimited@gmail.com
+                    </a>
 
-          </div>
-
-
-          <div>
-
-            <strong>
-              Address
-            </strong>
-
-            [Street Address, Abuja, Nigeria]
-
-          </div>
+                </div>
 
 
-          <div>
+                <div class="contact-item">
 
-            <strong>
-              CAC Registration
-            </strong>
+                    <strong>MAIN OFFICE</strong>
 
-            [CAC Registration Number]
+                    Abuja, Nigeria
 
-          </div>
-
-        </div>
-
-      </div>
+                </div>
 
 
-      <form onsubmit="sendMessage(event)">
+                <div class="contact-item">
 
-        <div class="form-row">
+                    <strong>BRANCH OFFICE</strong>
 
-          <div class="field">
+                    Jos, Plateau State, Nigeria
 
-            <label>
-              Name
-            </label>
-
-            <input
-              type="text"
-              required
-              placeholder="Your name"
-            >
-
-          </div>
+                </div>
 
 
-          <div class="field">
+                <div class="contact-item">
 
-            <label>
-              Email
-            </label>
+                    <strong>WEBSITE</strong>
 
-            <input
-              type="email"
-              required
-              placeholder="Your email"
-            >
+                    <a
+                        href="https://junioresourceinvestmentlimited-hub.github.io/JURIL.COM"
+                        target="_blank"
+                    >
+                        JURIL.COM
+                    </a>
 
-          </div>
+                </div>
+
+            </div>
+
+
+            <!-- SOCIAL MEDIA -->
+
+            <div class="social">
+
+                <a
+                    href="https://www.facebook.com/junioresourceinvestment"
+                    target="_blank"
+                >
+                    Facebook
+                </a>
+
+                <a
+                    href="https://www.instagram.com/JURIL"
+                    target="_blank"
+                >
+                    Instagram
+                </a>
+
+                <a
+                    href="https://twitter.com/JURIL001"
+                    target="_blank"
+                >
+                    Twitter
+                </a>
+
+            </div>
 
         </div>
 
 
-        <div class="field">
+        <!-- CONTACT FORM -->
 
-          <label>
-            Subject
-          </label>
-
-          <input
-            type="text"
-            required
-            placeholder="How can we help?"
-          >
-
-        </div>
-
-
-        <div class="field">
-
-          <label>
-            Message
-          </label>
-
-          <textarea
-            required
-            placeholder="Write your message..."
-          ></textarea>
-
-        </div>
-
-
-        <button
-          type="submit"
-          class="btn btn-primary"
+        <form
+            class="contact-form"
+            action="mailto:junioresourceinvestmentlimited@gmail.com"
+            method="post"
+            enctype="text/plain"
         >
-          Send Message
-        </button>
 
-      </form>
+            <div class="form-group">
+
+                <label for="name">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="Name"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="email">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="Email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="subject">
+                    Subject
+                </label>
+
+                <input
+                    type="text"
+                    id="subject"
+                    name="Subject"
+                    placeholder="Business enquiry"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="message">
+                    Message
+                </label>
+
+                <textarea
+                    id="message"
+                    name="Message"
+                    placeholder="Write your message here..."
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="btn btn-primary"
+            >
+                Send Message
+            </button>
+
+        </form>
 
     </div>
 
-  </div>
+</div>
 
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+     ========================= -->
 
 <footer>
 
-  <div class="container footer-grid">
+<div class="container">
 
-    <div class="footer-brand">
+    <div class="footer-grid">
 
-      Junio <span>Resource Investment Limited</span>
+
+        <div class="footer-column">
+
+            <h3>
+                JUNIO RESOURCE INVESTMENT LIMITED
+            </h3>
+
+            <p>
+                ENTREPRENEURSHIP • TRADING • INVESTMENT
+            </p>
+
+            <p style="margin-top:12px;">
+                Building value and creating opportunities
+                through responsible business.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Offices
+            </h3>
+
+            <ul>
+
+                <li>
+                    Main Office: Abuja
+                </li>
+
+                <li>
+                    Branch Office: Jos, Plateau State
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Contact
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="tel:+2349130177744">
+                        +234 913 017 7744
+                    </a>
+                </li>
+
+                <li>
+                    <a href="mailto:junioresourceinvestmentlimited@gmail.com">
+                        Email Us
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="https://www.facebook.com/junioresourceinvestment"
+                        target="_blank"
+                    >
+                        Facebook
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="https://www.instagram.com/JURIL"
+                        target="_blank"
+                    >
+                        Instagram: @JURIL
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="https://twitter.com/JURIL001"
+                        target="_blank"
+                    >
+                        Twitter: @JURIL001
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
 
     </div>
 
-    <div class="footer-text">
 
-      © 2026 Junio Resource Investment Limited.
-      All rights reserved.
+    <div class="footer-bottom">
+
+        <span>
+            © <span id="year"></span>
+            JUNIO RESOURCE INVESTMENT LIMITED.
+            All Rights Reserved.
+        </span>
+
+        <span>
+            JURIL
+        </span>
 
     </div>
 
-  </div>
+</div>
 
 </footer>
 
 
+<!-- =========================
+     JAVASCRIPT
+     ========================= -->
+
 <script>
 
-function sendMessage(event){
-
-  event.preventDefault();
-
-  alert(
-    "Thank you for contacting Junio Resource Investment Limited. " +
-    "Please connect this form to your email or form service before publishing."
-  );
-
-}
+document.getElementById("year").textContent =
+    new Date().getFullYear();
 
 </script>
 
